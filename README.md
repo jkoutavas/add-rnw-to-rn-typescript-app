@@ -1,3 +1,5 @@
+README last updated 27-July-21
+
 # Introduction
 
 This repo follows along with the article ["How to add React Native Web to an existing React Native project"](https://arry.medium.com/how-to-add-react-native-web-to-an-existing-react-native-project-eb98c952c12f) demonstrating the steps in the _Adding React Native Web to a React Native init project_ section of the article.
@@ -65,7 +67,7 @@ Now when you run on mobile, you'll see the same UI come up as does on web, which
 
 ![](screenshot.png)
 
-### Taking a small extra step: `Platform` example:
+### Taking a small extra step: `Platform` example
 
 I'll admit I twitched a tiny bit while look at the above screen shot taken from the article. Taking a page from [Multi-platform setup](https://necolas.github.io/react-native-web/docs/multi-platform/) in the React Native Web documentation, I had the screen's "Hello" mesasge be platform aware, like so:
 
