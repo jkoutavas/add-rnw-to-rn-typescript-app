@@ -15,8 +15,8 @@ const babelLoaderConfiguration = {
   test: /\.js$|tsx?$/,
   // Add every directory that needs to be compiled by Babel during the build.
   include: [
-    path.resolve(__dirname, 'index.web.js'), // Entry to your application
-    path.resolve(__dirname, 'App.web.tsx'), // Change this to your main App file
+    path.resolve(__dirname, 'index.web.js'), // Entry to your web application
+    path.resolve(__dirname, 'App.tsx'), // App.web.tsx or App.tsx
     path.resolve(__dirname, 'src'),
     ...compileNodeModules,
   ],
@@ -56,7 +56,7 @@ module.exports = {
   output: {
     path: path.resolve(appDirectory, 'dist'),
     publicPath: '/',
-    filename: 'rnw_blogpost.bundle.js',
+    filename: 'bundle.js',
   },
   resolve: {
     extensions: ['.web.tsx', '.web.ts', '.tsx', '.ts', '.web.js', '.js'],
