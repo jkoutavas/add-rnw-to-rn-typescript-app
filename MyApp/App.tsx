@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {Platform, View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 
 const App = () => {
   const [count, setCount] = useState(0);
+  const rnType = Platform.OS === 'web' ? 'React Native Web' : 'React Native';
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello from {'\n'}React Native Web!</Text>
+      <Text style={styles.title}>
+        Hello from {'\n'}
+        {rnType}!
+      </Text>
       <TouchableOpacity
         onPress={() => setCount(count + 1)}
         style={styles.button}>
