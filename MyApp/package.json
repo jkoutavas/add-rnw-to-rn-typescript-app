@@ -7,7 +7,9 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "build": "rm -rf dist/ && webpack --mode=production --config webpack.config.js",
+    "web": "webpack serve --mode=development --config webpack.config.js"
   },
   "dependencies": {
     "react": "17.0.1",
