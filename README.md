@@ -2,7 +2,7 @@ README last updated 27-July-21
 
 # Introduction
 
-This repo follows along with the article ["How to add React Native Web to an existing React Native project"](https://arry.medium.com/how-to-add-react-native-web-to-an-existing-react-native-project-eb98c952c12f) demonstrating the steps in the _Adding React Native Web to a React Native init project_ section of the article.
+This repo is a companion to the excellent Medium article ["How to add React Native Web to an existing React Native project"](https://arry.medium.com/how-to-add-react-native-web-to-an-existing-react-native-project-eb98c952c12f), by [Aryan Goharzad](https://arry.medium.com), demonstrating the steps in the _Adding React Native Web to a React Native init project_ section of his article.
 
 ## Initial commit of a Typescript React Native app
 
@@ -69,7 +69,7 @@ Now when you run on mobile, you'll see the same UI come up as does on web, which
 
 ### Taking a small extra step: `Platform` example
 
-I'll admit I twitched a tiny bit while look at the above screen shot taken from the article. I thought "Saying React Native Web is running on mobile? That's not exactly right." So, taking a page from [Multi-platform setup](https://necolas.github.io/react-native-web/docs/multi-platform/) in the React Native Web documentation, I had the screen's "Hello" message be platform aware, like so:
+I'll admit I twitched a tiny bit while looking at the above screen shot taken from the article. I thought "Saying React Native Web is running on mobile? That's not exactly right." So, taking a page from [Multi-platform setup](https://necolas.github.io/react-native-web/docs/multi-platform/) in the React Native Web documentation, I had the screen's "Hello" message be platform aware, like so:
 
 ```ts
 const rnType = Platform.OS === 'web' ? 'React Native Web' : 'React Native';
