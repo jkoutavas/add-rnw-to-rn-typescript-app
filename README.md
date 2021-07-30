@@ -1,4 +1,4 @@
-README last updated 27-July-21
+README last updated 30-July-21
 
 # Introduction
 
@@ -28,7 +28,7 @@ yarn add -D babel-plugin-react-native-web webpack webpack-cli webpack-dev-server
 
 **Step 4**: Add [webpack.config.js](https://gist.github.com/arrygoo/81d95ecc55313a7d0668f6711cfc7ff9#file-webpack-config-js)
 
-**Step 5**: Add [App.web.tsx]()
+**Step 5**: Add [App.web.tsx](https://gist.github.com/arrygoo/81d95ecc55313a7d0668f6711cfc7ff9#file-app-web-tsx)
 Per the article *"This file is a temporary addition to verify that our setup is working before migrating the rest of the app to React Native web. Eventually, you can remove this file, and have a shared App.tsx that runs on both web and mobile."*
 
 **Step 6**: Add this to `package.json`:
