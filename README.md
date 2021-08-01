@@ -81,10 +81,18 @@ Resulting in this "non-twitching" outcome :-), walla:
 
 ## Taking a larger step: custom font example
 
-Going futher beyond Aryan's article, I applied the steps defined in the article [Add Custom Fonts in React Native 0.63 for iOS and android](https://dev.to/aneeqakhan/add-custom-fonts-in-react-native-0-63-for-ios-and-android-3a9e) to add Google's [Nova Script](https://fonts.google.com/specimen/Nova+Script) font to appear on iOS and Android.
+Going futher beyond Aryan's article, I applied the steps defined in the article [Add Custom Fonts in React Native 0.63 for iOS and android](https://dev.to/aneeqakhan/add-custom-fonts-in-react-native-0-63-for-ios-and-android-3a9e) to add Google's [Nova Script](https://fonts.google.com/specimen/Nova+Script) font to appear on mobile.
 
-Then following [Setup browser compatibility for a project that uses React Native CSS modules](https://github.com/kristerkari/react-native-css-modules/blob/master/docs/web-compatibility.md) I added support for the Nova Script custom font to appear on web. See [this commit](https://github.com/jkoutavas/add-rnw-to-rn-typescript-app/commit/46d3d59fbfeb92ae17b4ffca17623db49ab37a8b) for the delta.
-
-I threw in a display of the built-in font 'Typewriter', for good measure. You can see both fonts displayed here:
+Then following [Setup browser compatibility for a project that uses React Native CSS modules](https://github.com/kristerkari/react-native-css-modules/blob/master/docs/web-compatibility.md) I added support for the Nova Script custom font to appear on web. You can see the font displayed here:
 
 ![](screenshot3.png)
+
+### A lesson learned...
+
+...you need to test on all three platforms when doing this work!
+
+In [PR #1](https://github.com/jkoutavas/add-rnw-to-rn-typescript-app/pull/1) I had added the TypeWriter font in my example, and had not tested this on Android. Of course, TypeWriter is NOT available on [React Native Android font list](https://github.com/react-native-training/react-native-fonts). I also noted while testing on Android that Nova Script wasn't apearing as expected. Why? It's because [Android has specific rules for font file names](https://medium.com/@gattermeier/custom-fonts-in-react-native-for-android-b8a331a7d2a7#.vkk8etu6d), which states:
+
+> *Make sure the fonts are lowercase only and follow this pattern: fontname.ttf, fontname_bold.ttf, fontname_light.ttf, fontname_bold_italic.ttf*
+
+So, I fixed things up in [PR #2](https://github.com/jkoutavas/add-rnw-to-rn-typescript-app/pull/1), and as you can see in the previous screen shot, the custom font is appearing now on all 3 platforms.
