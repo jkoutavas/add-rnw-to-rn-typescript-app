@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {Platform, View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {
+  Platform,
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Image,
+} from 'react-native';
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -19,6 +26,11 @@ const App = () => {
       <Text>You clicked {count} times!</Text>
 
       <Text style={styles.novascript}>Nova Script font</Text>
+
+      <Image
+        source={require('./assets/images/reddog.png')}
+        style={styles.image}
+      />
     </View>
   );
 };
@@ -46,6 +58,11 @@ const styles = StyleSheet.create({
       default: {fontFamily: 'Nova Script'},
       android: {fontFamily: 'novascript'},
     }),
+  },
+  image: {
+    marginTop: 30,
+    width: 96,
+    height: 96,
   },
 });
 

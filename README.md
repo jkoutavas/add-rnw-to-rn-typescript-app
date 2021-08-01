@@ -96,3 +96,25 @@ In [PR #1](https://github.com/jkoutavas/add-rnw-to-rn-typescript-app/pull/1) I h
 > *Make sure the fonts are lowercase only and follow this pattern: fontname.ttf, fontname_bold.ttf, fontname_light.ttf, fontname_bold_italic.ttf*
 
 So, I fixed things up in [PR #2](https://github.com/jkoutavas/add-rnw-to-rn-typescript-app/pull/2), and as you can see in the now updated screen shot above, the Nova Script custom font is appearing now on all 3 platforms.
+
+## A webpack tweak for image loading
+
+It turns out a line needs to be added to `webpack.config.js` to get image assets to load and display. Add the `esModule: false` line to the `imageLoaderConfiguration` like so:
+
+```json
+const imageLoaderConfiguration = {
+  test: /\.(gif|jpe?g|png|svg)$/,
+  use: {
+    loader: 'url-loader',
+    options: {
+      name: '[name].[ext]',
+      esModule: false,			<-- add this line
+    },
+  },
+};
+```
+
+
+And the happy little red dog will appear...
+
+![](screenshot4.png)
