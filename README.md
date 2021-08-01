@@ -1,4 +1,4 @@
-README last updated 30-July-21
+README last updated 1-Aug-21
 
 # Introduction
 
@@ -78,3 +78,13 @@ const rnType = Platform.OS === 'web' ? 'React Native Web' : 'React Native';
 Resulting in this "non-twitching" outcome :-), walla:
 
 ![](screenshot2.png)
+
+## Taking a larger step: custom font example
+
+Going futher beyond Aryan's article, I applied the steps defined in the article [Add Custom Fonts in React Native 0.63 for iOS and android](https://dev.to/aneeqakhan/add-custom-fonts-in-react-native-0-63-for-ios-and-android-3a9e) to add Google's [Nova Script](https://fonts.google.com/specimen/Nova+Script) font to appear on iOS and Android.
+
+Then following [Setup browser compatibility for a project that uses React Native CSS modules](https://github.com/kristerkari/react-native-css-modules/blob/master/docs/web-compatibility.md) I added support for the Nova Script custom font to appear on web. See [this commit](46d3d59fbfeb92ae17b4ffca17623db49ab37a8b) for the delta.
+
+I threw in a display of the built-in font 'Typewriter', for good measure. You can see both fonts displayed here:
+
+![](screenshot3.png)

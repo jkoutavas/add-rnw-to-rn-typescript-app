@@ -49,6 +49,21 @@ const imageLoaderConfiguration = {
   },
 };
 
+const cssLoaderConfiguration = {
+  test: /\.css$/,
+  use: [
+    {
+      loader: 'style-loader',
+    },
+    {
+      loader: 'css-loader',
+      options: {
+        modules: true,
+      },
+    },
+  ],
+};
+
 module.exports = {
   entry: {
     app: path.join(__dirname, 'index.web.js'),
@@ -69,6 +84,7 @@ module.exports = {
       babelLoaderConfiguration,
       imageLoaderConfiguration,
       svgLoaderConfiguration,
+      cssLoaderConfiguration,
     ],
   },
   plugins: [
