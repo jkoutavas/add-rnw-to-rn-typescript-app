@@ -42,7 +42,7 @@ Per the article *"This file is a temporary addition to verify that our setup is 
 
 The article states, "Once you’ve confirmed that your React Native Web setup is working for the very simple component above, you can gradually add your app components to App.web.tsx and test them until all of your apps are ported to the web."
 
-Issuing `yarn run web` now brings up the web app. And issuing `npx react-native run-ios` and `npx react-native run-android` brings up the app on mobile too, confirming that things are setup and ready for adding our own app compoents.
+Issuing `yarn web` now brings up the web app. And issuing `npx react-native run-ios` and `npx react-native run-android` brings up the app on mobile too, confirming that things are setup and ready for adding our own app compoents.
 
 You'll see that the "Hello from React Native Web!" pages appears at http://localhost:8080 and the default `App.tsx` getting started screen for React Native appears on mobile.
 
