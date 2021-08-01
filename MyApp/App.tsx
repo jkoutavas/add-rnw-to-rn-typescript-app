@@ -18,7 +18,6 @@ const App = () => {
 
       <Text>You clicked {count} times!</Text>
 
-      <Text style={styles.typewriter}>Typewriter font</Text>
       <Text style={styles.novascript}>Nova Script font</Text>
     </View>
   );
@@ -40,15 +39,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 40,
   },
-  typewriter: {
-    marginTop: 30,
-    fontFamily: 'American Typewriter',
-    fontSize: 24,
-  },
   novascript: {
     marginTop: 30,
-    fontFamily: 'Nova Script',
     fontSize: 24,
+    ...Platform.select({
+      default: {fontFamily: 'Nova Script'},
+      android: {fontFamily: 'novascript'},
+    }),
   },
 });
 
