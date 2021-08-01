@@ -101,7 +101,7 @@ So, I fixed things up in [PR #2](https://github.com/jkoutavas/add-rnw-to-rn-type
 
 It turns out a line needs to be added to `webpack.config.js` to get image assets to load and display. Add the `esModule: false` line to the `imageLoaderConfiguration` like so:
 
-```json
+```js
 const imageLoaderConfiguration = {
   test: /\.(gif|jpe?g|png|svg)$/,
   use: {
