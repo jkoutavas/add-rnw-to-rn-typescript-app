@@ -1,4 +1,4 @@
-README last updated 1-Aug-21
+README last updated 2-Aug-21
 
 # Introduction
 
@@ -114,7 +114,12 @@ const imageLoaderConfiguration = {
 };
 ```
 
-
 And the happy little red dog will appear...
 
 ![](screenshot4.png)
+
+### Fussing about with RNW image loading
+
+Unlike React Native, `<Image>` on React Native Web require a width and height be set. You can read about this and `esModule: false` in this thread of comments on react-native-web [issue 1497](https://github.com/necolas/react-native-web/issues/1497).
+
+Also on issue 1497, there's a recent comment added (this morning!) that states one can just import images, (i.e. `import logo from './logo.png';`), but I have not gotten this to work yet. Stay tuned.
